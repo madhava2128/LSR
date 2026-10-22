@@ -46,7 +46,7 @@ export function About() {
           <div className="relative w-full max-w-lg lg:max-w-none mx-auto mt-2 lg:mt-0">
             {/* Soft Ambient Blur Glow */}
             <div 
-              className="absolute -inset-4 bg-gradient-to-tr from-primary-green/25 via-accent-green/15 to-transparent rounded-3xl blur-2xl opacity-70 pointer-events-none" 
+              className="absolute -inset-4 bg-linear-to-tr from-primary-green/25 via-accent-green/15 to-transparent rounded-3xl blur-2xl opacity-70 pointer-events-none" 
               aria-hidden="true"
             />
             
@@ -57,12 +57,12 @@ export function About() {
             />
 
             {/* Perfectly Proportioned Image Frame */}
-            <div className="relative z-10 w-full aspect-[4/3] sm:aspect-[14/10] rounded-3xl overflow-hidden bg-white border border-primary-green/15 shadow-xl">
+            <div className="relative z-10 w-full aspect-4/3 sm:aspect-14/10 rounded-3xl overflow-hidden bg-white border border-primary-green/15 shadow-xl flex items-center justify-center">
               <Image
-                src="/images/coachvisual.webp"
-                alt="DNC Coach Durga"
+                src="/images/logo/logo.svg"
+                alt="LSR Nutrition Club"
                 fill
-                className="object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
+                className="object-contain p-8 sm:p-12 transition-transform duration-700 hover:scale-[1.03]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
@@ -70,7 +70,7 @@ export function About() {
 
             {/* Floating Glassmorphic Overlay Badge - Mobile Bounds Optimized */}
             <div className="absolute -bottom-4 left-2 sm:-left-6 z-20 backdrop-blur-md bg-white/95 border border-white/80 shadow-lg rounded-2xl p-3.5 px-4 sm:p-4 sm:px-5 flex items-center gap-3 max-w-[calc(100vw-3rem)] sm:max-w-xs">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary-green to-accent-green text-white flex items-center justify-center shrink-0 shadow-sm">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-linear-to-br from-primary-green to-accent-green text-white flex items-center justify-center shrink-0 shadow-sm">
                 <Leaf className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
               <div>

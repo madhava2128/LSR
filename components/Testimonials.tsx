@@ -96,7 +96,7 @@ export function Testimonials({ limit }: TestimonialsProps = {}) {
                   </div>
 
                   <p className="text-text-muted italic text-sm sm:text-base leading-relaxed relative pl-3.5 border-l-2 border-primary-green/30">
-                    "{t(`items.${key}.quote`)}"
+                    &ldquo;{t(`items.${key}.quote`)}&rdquo;
                   </p>
                 </div>
 

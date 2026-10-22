@@ -45,7 +45,7 @@ export function Contact() {
       return;
     }
 
-    let text = `Hi Coach Durga / DNC Wellness!\nI would like to enquire about your nutrition programs.\n\n`;
+    let text = `Hi Coach Siva / LSR Nutrition Club!\nI would like to enquire about your nutrition programs.\n\n`;
     text += `👤 *Name:* ${name}\n`;
     if (phone) text += `📱 *Phone:* ${phone}\n`;
     if (email) text += `📧 *Email:* ${email}\n`;
@@ -53,7 +53,7 @@ export function Contact() {
     if (message) text += `💬 *Message:* ${message}\n`;
 
     const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/917981566705?text=${encodedText}`;
+    const whatsappUrl = `https://wa.me/918639510702?text=${encodedText}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -87,7 +87,7 @@ export function Contact() {
         setStatus('success');
         form.reset();
       }
-    } catch (error) {
+    } catch {
       setStatus('success');
       form.reset();
     }
@@ -113,26 +113,22 @@ export function Contact() {
               <div className="space-y-5 sm:space-y-6">
                 <div>
                   <h4 className="text-[11px] sm:text-xs font-bold text-primary-green uppercase tracking-widest mb-1.5 sm:mb-2">{t('email_label')}</h4>
-                  <a href="mailto:durganutrition01@gmail.com" className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
+                  <a href="mailto:lsrnutrition@gmail.com" className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green/70 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span className="truncate">durganutrition01@gmail.com</span>
+                    <span className="truncate">lsrnutrition@gmail.com</span>
                   </a>
                 </div>
                 
                 <div>
                   <h4 className="text-[11px] sm:text-xs font-bold text-primary-green uppercase tracking-widest mb-1.5 sm:mb-2">{t('phone_label')}</h4>
                   <div className="flex flex-col gap-2">
-                    <a href="tel:7981566705" className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
+                    <a href="tel:8639510702" className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
                       <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green/70 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
-                      +91 79815 66705
-                    </a>
-                    <a href="tel:7416082977" className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
-                      <svg className="w-4 h-4 sm:w-5 sm:h-5 opacity-0 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
-                      +91 74160 82977
+                      +91 86395 10702
                     </a>
                   </div>
                 </div>
@@ -146,7 +142,7 @@ export function Contact() {
                     className="text-text-dark hover:text-accent-green transition-colors font-medium flex items-start gap-2.5 text-sm sm:text-base"
                   >
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-accent-green/70 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span>
@@ -160,7 +156,7 @@ export function Contact() {
                   <h4 className="text-[11px] sm:text-xs font-bold text-primary-green uppercase tracking-widest mb-2.5">Social Media</h4>
                   <div className="flex flex-wrap items-center gap-2.5">
                     <a 
-                      href="https://www.instagram.com/durga.nutrition?utm_source=qr&stkn=NXQ5ajdxcDE2Ym5n" 
+                      href="https://www.instagram.com/lsrnutrition?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw==" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gray-50 hover:bg-[#E4405F] text-text-dark hover:text-white transition-all text-xs font-semibold border border-gray-200 shadow-xs"
@@ -182,7 +178,7 @@ export function Contact() {
                       Facebook
                     </a>
                     <a 
-                      href="https://youtube.com/@dncorganization?si=gleytDMK9B98mUOO" 
+                      href="https://youtube.com/@lsrnutrition" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gray-50 hover:bg-[#FF0000] text-text-dark hover:text-white transition-all text-xs font-semibold border border-gray-200 shadow-xs"
@@ -205,7 +201,7 @@ export function Contact() {
                 style={{ border: 0 }} 
                 loading="lazy" 
                 allowFullScreen 
-                src="https://maps.google.com/maps?q=DNC%20Wellness%20Centre&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=LSR%20Nutrition%20Club&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 title="Google Maps Location"
               ></iframe>
             </div>
@@ -238,8 +234,8 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-5 sm:gap-6">
-                <input type="hidden" name="subject" value="New Enquiry from DNC Website" />
-                <input type="hidden" name="from_name" value="DNC Wellness Website" />
+                <input type="hidden" name="subject" value="New Enquiry from LSR Nutrition Club Website" />
+                <input type="hidden" name="from_name" value="LSR Nutrition Club Website" />
                 <input type="hidden" name="program" value={selectedPrograms.join(', ')} />
 
                 {/* 1. Visible Multi-Select Program Selection Chips */}
@@ -251,7 +247,7 @@ export function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
                     {PROGRAM_OPTIONS.map((prog) => {
                       const isSelected = selectedPrograms.includes(prog);
-                      const progName = t(`programs.${prog}` as any);
+                      const progName = t(`programs.${prog}` as Parameters<typeof t>[0]);
                       return (
                         <button
                           key={prog}
@@ -288,7 +284,7 @@ export function Contact() {
                       id="name" 
                       name="name" 
                       required 
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-green/60 focus:border-transparent transition-all shadow-xs text-xs sm:text-sm"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-green transition-all shadow-xs text-xs sm:text-sm"
                       placeholder={t('form_name_placeholder')}
                     />
                   </div>
@@ -300,7 +296,7 @@ export function Contact() {
                       id="phone" 
                       name="phone" 
                       required 
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-green/60 focus:border-transparent transition-all shadow-xs text-xs sm:text-sm"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-green transition-all shadow-xs text-xs sm:text-sm"
                       placeholder={t('form_phone_placeholder')}
                     />
                   </div>
@@ -314,7 +310,7 @@ export function Contact() {
                     id="email" 
                     name="email" 
                     required 
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-green/60 focus:border-transparent transition-all shadow-xs text-xs sm:text-sm"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-green transition-all shadow-xs text-xs sm:text-sm"
                     placeholder={t('form_email_placeholder')}
                   />
                 </div>
@@ -326,7 +322,7 @@ export function Contact() {
                     id="message" 
                     name="message" 
                     rows={3}
-                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-gray-50/50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-primary-green/60 focus:border-transparent transition-all shadow-xs resize-none text-xs sm:text-sm"
+                    className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-green transition-all shadow-xs resize-none text-xs sm:text-sm"
                     placeholder={t('form_message_placeholder')}
                   ></textarea>
                 </div>

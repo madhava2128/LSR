@@ -3,7 +3,7 @@
 import React from 'react';
 
 export function WhatsAppButton() {
-  const whatsappUrl = "https://wa.me/917981566705?text=" + encodeURIComponent("Hi Coach Durga! I would like to inquire about nutrition guidance at DNC Wellness Centre.");
+  const whatsappUrl = "https://wa.me/918639510702?text=" + encodeURIComponent("Hi Coach Siva! I would like to inquire about nutrition guidance at LSR Nutrition Club.");
 
   return (
     <a

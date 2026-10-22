@@ -125,7 +125,7 @@ export function ShowcaseCarousel() {
   const items = Array.isArray(rawItems) ? rawItems : [];
 
   return (
-    <section className="w-full py-14 sm:py-20 md:py-28 bg-gradient-to-b from-white via-primary-green/5 to-white overflow-hidden relative">
+    <section className="w-full py-14 sm:py-20 md:py-28 bg-linear-to-b from-white via-primary-green/5 to-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <SectionHeading
           eyebrow={t('eyebrow')}
@@ -136,7 +136,7 @@ export function ShowcaseCarousel() {
 
         {/* Center Showcase Carousel Frame */}
         <div 
-          className="relative w-full max-w-5xl mx-auto h-[320px] sm:h-[460px] md:h-[520px] flex items-center justify-center overflow-hidden"
+          className="relative w-full max-w-5xl mx-auto h-80 sm:h-115 md:h-130 flex items-center justify-center overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -163,14 +163,14 @@ export function ShowcaseCarousel() {
                 }}
                 onClick={() => setActiveIndex(idx)}
                 style={{ pointerEvents: cardStyle.pointerEvents }}
-                className={`absolute w-[220px] sm:w-[340px] md:w-[420px] h-[280px] sm:h-[420px] md:h-[480px] rounded-3xl overflow-hidden cursor-pointer shadow-xl transition-shadow duration-300 ${
+                className={`absolute w-55 sm:w-85 md:w-105 h-70 sm:h-105 md:h-120 rounded-3xl overflow-hidden cursor-pointer shadow-xl transition-shadow duration-300 ${
                   isCenter ? 'ring-4 ring-[#8BBB92]/40 shadow-2xl' : 'hover:opacity-90'
                 }`}
               >
                 <div className="relative w-full h-full group bg-gray-950">
                   <Image
                     src={img.src}
-                    alt={`DNC Showcase ${idx + 1}`}
+                    alt={`LNC Showcase ${idx + 1}`}
                     fill
                     sizes="(max-width: 768px) 220px, 420px"
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -178,9 +178,9 @@ export function ShowcaseCarousel() {
                   />
 
                   {/* Gradient Overlay for Text & Tag */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8 text-white transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-linear-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-4 sm:p-6 md:p-8 text-white transition-opacity duration-300">
                     <span className="inline-block self-start text-[10px] sm:text-xs font-bold tracking-wider uppercase px-2.5 py-0.5 sm:px-3 sm:py-1 bg-[#8BBB92]/90 text-white rounded-full mb-1.5 shadow-sm backdrop-blur-md">
-                      {items[idx]?.tag || 'DNC Wellness'}
+                      {items[idx]?.tag || 'LNC Wellness'}
                     </span>
                     <h3 className="text-sm sm:text-xl font-bold tracking-tight leading-snug drop-shadow-md">
                       {items[idx]?.title || 'Wellness Showcase'}

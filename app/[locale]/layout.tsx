@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter, Noto_Sans_Telugu, Noto_Sans_Devanagari } from "next/font/google";
+import { Poppins, Inter, Noto_Sans_Telugu } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
@@ -28,12 +28,6 @@ const telugu = Noto_Sans_Telugu({
   weight: ["400", "500", "600", "700"],
 });
 
-const hindi = Noto_Sans_Devanagari({
-  variable: "--font-hindi",
-  subsets: ["devanagari"],
-  weight: ["400", "500", "600", "700"],
-});
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });
@@ -45,11 +39,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('title'),
       description: t('description'),
     },
+    icons: {
+      icon: '/icon.svg',
+    },
     alternates: {
       languages: {
         'en': '/en',
-        'te': '/te',
-        'hi': '/hi'
+        'te': '/te'
       }
     }
   };
@@ -64,19 +60,19 @@ export default async function RootLayout({
 }) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as any)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
   const messages = await getMessages();
   
   // Assign a font class to the body based on the active locale
-  const fontClass = locale === 'te' ? 'font-te' : locale === 'hi' ? 'font-hi' : 'font-en';
+  const fontClass = locale === 'te' ? 'font-te' : 'font-en';
 
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} ${inter.variable} ${telugu.variable} ${hindi.variable} h-full antialiased`}
+      className={`${poppins.variable} ${inter.variable} ${telugu.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col bg-white ${fontClass}`}>
         <NextIntlClientProvider messages={messages}>

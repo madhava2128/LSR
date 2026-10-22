@@ -16,11 +16,11 @@ export function Hero() {
     <section className="relative w-full pt-32 pb-16 sm:pt-36 sm:pb-24 md:pt-40 md:pb-28 overflow-hidden bg-background">
       {/* Background Soft Lighting Gradients */}
       <div 
-        className="absolute -top-32 -right-32 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-bl from-primary-green/25 via-accent-green/15 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute -top-32 -right-32 w-87.5 sm:w-150 h-87.5 sm:h-150 bg-linear-to-bl from-primary-green/25 via-accent-green/15 to-transparent rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
       <div 
-        className="absolute bottom-0 left-0 w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] bg-gradient-to-tr from-primary-green/15 via-emerald-100/20 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute bottom-0 left-0 w-75 sm:w-112.5 h-75 sm:h-112.5 bg-linear-to-tr from-primary-green/15 via-emerald-100/20 to-transparent rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
       />
 
@@ -73,7 +73,7 @@ export function Hero() {
           >
             {/* Ambient Background Glow */}
             <div 
-              className="absolute -inset-4 bg-gradient-to-tr from-primary-green/25 via-accent-green/15 to-emerald-200/30 rounded-3xl blur-2xl opacity-70 pointer-events-none" 
+              className="absolute -inset-4 bg-linear-to-tr from-primary-green/25 via-accent-green/15 to-emerald-200/30 rounded-3xl blur-2xl opacity-70 pointer-events-none" 
               aria-hidden="true"
             />
             
@@ -84,10 +84,10 @@ export function Hero() {
             />
 
             {/* Perfectly Fitted Image Card without Black Letterboxing */}
-            <div className="relative z-10 w-full aspect-[576/314] rounded-3xl overflow-hidden bg-white border border-primary-green/15 shadow-xl">
+            <div className="relative z-10 w-full aspect-576/314 rounded-3xl overflow-hidden bg-white border border-primary-green/15 shadow-xl">
               <Image
                 src="/images/hero.webp"
-                alt="DNC Wellness Hero"
+                alt="LSR Nutrition Club Hero"
                 fill
                 className="object-cover object-center transition-transform duration-700 hover:scale-[1.03]"
                 priority
@@ -102,7 +102,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="absolute -bottom-4 left-2 sm:-left-6 z-20 backdrop-blur-md bg-white/95 border border-white/80 shadow-lg rounded-2xl p-3 px-4 sm:p-3.5 sm:px-4.5 flex items-center gap-3 max-w-[calc(100vw-3rem)] sm:max-w-xs"
             >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-primary-green to-accent-green flex items-center justify-center text-white shadow-xs shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-linear-to-br from-primary-green to-accent-green flex items-center justify-center text-white shadow-xs shrink-0">
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </div>
               <div>

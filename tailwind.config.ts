@@ -18,7 +18,6 @@ const config: Config = {
         sans: ["var(--font-inter)", "sans-serif"],
         heading: ["var(--font-poppins)", "sans-serif"],
         telugu: ["var(--font-telugu)", "sans-serif"],
-        hindi: ["var(--font-hindi)", "sans-serif"],
       },
     },
   },

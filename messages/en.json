@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "home": "Home",
-    "about": "About DNC",
+    "about": "About LNC",
     "services": "Programs",
     "testimonials": "Success Stories",
     "coach": "Our Coach",
@@ -17,9 +17,9 @@
   },
   "About": {
     "eyebrow": "Simple Nutrition for a Healthier Life",
-    "heading": "About DNC",
-    "subtext": "DNC (Durga Nutrition and Centre) focuses on helping people understand the importance of nutrition and healthy food habits.Our approach is based on making better food choices, understanding individual nutritional needs, and building healthy habits that can be followed for the long term.",
-    "why_choose_us": "Why Choose DNC?",
+    "heading": "About LNC",
+    "subtext": "LNC (LSR Nutrition Club) focuses on helping people understand the importance of nutrition and healthy food habits.Our approach is based on making better food choices, understanding individual nutritional needs, and building healthy habits that can be followed for the long term.",
+    "why_choose_us": "Why Choose LNC?",
     "bullet_1": "Personalized nutrition guidance based on your needs",
     "bullet_2": "Practical and sustainable healthy eating habits",
     "bullet_3": "One-on-one wellness guidance and support",
@@ -27,15 +27,15 @@
     "faq_heading": "Frequently Asked Questions",
     "faqs": [
       {
-        "question": "What is the core philosophy of DNC Wellness Centre?",
-        "answer": "DNC focuses on sustainable, evidence-based nutrition and lifestyle changes rather than quick fixes or restrictive crash diets."
+        "question": "What is the core philosophy of LSR Nutrition Club?",
+        "answer": "LNC focuses on sustainable, evidence-based nutrition and lifestyle changes rather than quick fixes or restrictive crash diets."
       },
       {
-        "question": "Who can benefit from DNC nutrition guidance?",
+        "question": "Who can benefit from LNC nutrition guidance?",
         "answer": "Anyone looking to improve their health, manage weight, build better eating habits, or support specific dietary requirements."
       },
       {
-        "question": "Is DNC suitable for beginners who know very little about nutrition?",
+        "question": "Is LNC suitable for beginners who know very little about nutrition?",
         "answer": "Yes! We simplify nutrition science into practical, easy-to-follow daily habits tailored to your current lifestyle."
       },
       {
@@ -43,7 +43,7 @@
         "answer": "No. We emphasize locally available, whole, nutritious foods that fit naturally into your everyday home meals."
       },
       {
-        "question": "How does DNC ensure long-term, sustainable results?",
+        "question": "How does LNC ensure long-term, sustainable results?",
         "answer": "By focusing on behavioral habits, mindful eating, and 1-on-1 personalized guidance that fits into your long-term routine."
       }
     ]
@@ -66,7 +66,7 @@
       "1": {
         "title": "Weight Loss & Fitness",
         "description": "Learn practical nutrition and lifestyle habits to support healthy weight management and an active lifestyle.",
-        "testimonial_quote": "Lost 8 kg in 3 months without giving up my regular home meals. Coach Durga strategies made it so effortless!",
+        "testimonial_quote": "Lost 8 kg in 3 months without giving up my regular home meals. Coach Siva strategies made it so effortless!",
         "testimonial_author": "Priya R., Hyderabad"
       },
       "2": {
@@ -91,7 +91,7 @@
     "faq_heading": "Program FAQs",
     "faqs": [
       {
-        "question": "What types of wellness programs does DNC offer?",
+        "question": "What types of wellness programs does LNC offer?",
         "answer": "We offer targeted programs covering Weight Loss & Fitness, Nutrition & Supplements, Mindful Eating, and Personalized Nutrition."
       },
       {
@@ -115,7 +115,7 @@
   "ProgramDetails": {
     "weight-loss": {
       "title": "Weight Loss & Fitness Management",
-      "eyebrow": "DNC Program 01",
+      "eyebrow": "LNC Program 01",
       "tagline": "Sustainable Weight Loss Built Around Real Food & Active Lifestyle Habits",
       "overview": "Our Weight Loss & Fitness program focuses on achieving healthy, long-term body composition management through balanced everyday meals and active lifestyle habits. Instead of restrictive diets, we teach you how to nourish your body effectively.",
       "highlights": [
@@ -134,7 +134,7 @@
       "faqs": [
         {
           "question": "Do I have to follow a strict diet or starve myself?",
-          "answer": "Not at all. DNC plans focus on portion awareness, wholesome nutrition, and balanced home meals rather than starvation diets."
+          "answer": "Not at all. LNC plans focus on portion awareness, wholesome nutrition, and balanced home meals rather than starvation diets."
         },
         {
           "question": "How quickly can I expect to see weight loss results?",
@@ -142,15 +142,15 @@
         },
         {
           "question": "Can I continue eating my regional Indian home food?",
-          "answer": "Yes! All DNC plans are designed around your existing regional food habits, making adherence simple and enjoyable."
+          "answer": "Yes! All LNC plans are designed around your existing regional food habits, making adherence simple and enjoyable."
         }
       ],
-      "testimonial_quote": "Lost 8 kg in 3 months without giving up my regular home meals. Coach Durga strategies made it so effortless!",
+      "testimonial_quote": "Lost 8 kg in 3 months without giving up my regular home meals. Coach Siva strategies made it so effortless!",
       "testimonial_author": "Priya R., Hyderabad"
     },
     "nutrition-supplements": {
       "title": "Nutrition & Supplementation Guidance",
-      "eyebrow": "DNC Program 02",
+      "eyebrow": "LNC Program 02",
       "tagline": "Optimize Micronutrient Balance & Responsible Supplementation Choices",
       "overview": "Proper nutrition goes beyond basic calories. Our Nutrition & Supplements program helps you identify micronutrient gaps, understand essential vitamins and minerals, and make safe, evidence-based choices for your overall health.",
       "highlights": [
@@ -173,7 +173,7 @@
         },
         {
           "question": "Will you prescribe medical drugs?",
-          "answer": "No. DNC provides nutritional and lifestyle guidance. Medical conditions and prescriptions remain under the care of your physician."
+          "answer": "No. LNC provides nutritional and lifestyle guidance. Medical conditions and prescriptions remain under the care of your physician."
         },
         {
           "question": "How do I know which vitamins I am deficient in?",
@@ -185,7 +185,7 @@
     },
     "mindful-eating": {
       "title": "Mindful Eating & Behavioral Habits",
-      "eyebrow": "DNC Program 03",
+      "eyebrow": "LNC Program 03",
       "tagline": "Reconnect with Natural Hunger Cues & Build a Peaceful Relationship with Food",
       "overview": "Stress eating, emotional cravings, and rushed meals often disrupt digestion and health. The Mindful Eating program teaches you behavioral awareness techniques to enjoy your food fully while honoring your body's natural hunger and fullness signals.",
       "highlights": [
@@ -220,11 +220,11 @@
     },
     "personalized-nutrition": {
       "title": "Personalized Nutrition & Holistic Coaching",
-      "eyebrow": "DNC Program 04",
+      "eyebrow": "LNC Program 04",
       "tagline": "1-on-1 Tailored Strategy Designed Specifically for Your Body & Schedule",
       "overview": "No two individuals are identical. Our flagship Personalized Nutrition program offers complete 1-on-1 custom coaching that integrates your specific health objectives, work schedules, family diet, and long-term wellness targets into a cohesive strategy.",
       "highlights": [
-        "1-on-1 personal consultation with Coach Durga",
+        "1-on-1 personal consultation with Coach Siva",
         "Customized weekly meal frameworks crafted for your specific routine",
         "Direct continuous messaging support for meal reviews and queries",
         "Adaptive plan adjustments for travel, dining out, and special occasions"
@@ -247,7 +247,7 @@
         },
         {
           "question": "How do I get started with Personalized Coaching?",
-          "answer": "Click 'Enquire Now' on this page or fill out our Contact form to book your initial consultation with Coach Durga."
+          "answer": "Click 'Enquire Now' on this page or fill out our Contact form to book your initial consultation with Coach Siva."
         }
       ],
       "testimonial_quote": "The 1-on-1 guidance fit perfectly into my busy travel schedule. Having direct WhatsApp coaching kept me on track!",
@@ -255,7 +255,7 @@
     },
     "skin-health": {
       "title": "Skin Health & Nutrition",
-      "eyebrow": "DNC Program 05",
+      "eyebrow": "LNC Program 05",
       "tagline": "Nourish Your Skin from Within Through Balanced Everyday Nutrition",
       "overview": "Healthy, glowing skin starts with what you eat. Our Skin Health program focuses on how targeted nutrition and hydration habits can support clearer skin, reduce inflammation, and promote a natural glow — without expensive topicals or crash diets.",
       "highlights": [
@@ -290,7 +290,7 @@
     },
     "bone-joint-health": {
       "title": "Bone & Joint Health",
-      "eyebrow": "DNC Program 06",
+      "eyebrow": "LNC Program 06",
       "tagline": "Build Strong Bones & Healthy Joints Through Smart Everyday Nutrition",
       "overview": "Strong bones and flexible joints are essential for long-term mobility and quality of life. Our Bone & Joint Health program focuses on evidence-based nutrition strategies to support bone density, reduce joint inflammation, and enhance overall mobility through everyday food choices.",
       "highlights": [
@@ -331,17 +331,17 @@
     "missing_photo": "Photo Coming Soon",
     "items": {
       "1": {
-        "name": "Siva Gangadhar Reddy",
-        "result": "Weight Loss",
-        "quote": "Real client testimonial coming soon."
-      },
-      "3": {
-        "name": "Mohan Rao",
+        "name": "Ramesh V.",
         "result": "Weight Loss",
         "quote": "Real client testimonial coming soon."
       },
       "2": {
         "name": "Suhasini",
+        "result": "Weight Loss",
+        "quote": "Real client testimonial coming soon."
+      },
+      "3": {
+        "name": "Mohan Rao",
         "result": "Weight Loss",
         "quote": "Real client testimonial coming soon."
       },
@@ -366,7 +366,7 @@
         "quote": "Real client testimonial coming soon."
       },
       "8": {
-        "name": "Durga & Nageshwar Rao",
+        "name": "Suresh & Family",
         "result": "Weight Loss",
         "quote": "Real client testimonial coming soon."
       }
@@ -374,20 +374,20 @@
   },
   "CoachProfile": {
     "eyebrow": "Meet Your Wellness Coach",
-    "name": "Durga Nageswarao Madam",
+    "name": "Siva Gangadhar Reddy",
     "title": "Senior Wellness Coach",
-    "bio_1": "Durga Nageswarao Madam provides personalized nutrition and wellness guidance based on the DNC Nutrition System and healthy food habits.",
+    "bio_1": "Siva Gangadhar Reddy provides personalized nutrition and wellness guidance based on the LNC Nutrition System and healthy food habits.",
     "bio_2": "Her approach focuses on helping individuals understand better food choices, develop mindful eating habits, and make practical lifestyle changes that can be maintained over time.",
     "credentials_note": "* Certified Wellness Coach specializing in customized nutrition plans, holistic lifestyle habit building, and dedicated 1-on-1 guidance.",
     "faq_heading": "Coaching FAQs",
     "faqs": [
       {
-        "question": "Who is the senior wellness coach at DNC?",
-        "answer": "Durga Nageswarao Madam is a senior wellness coach specializing in comprehensive nutrition training and lifestyle guidance."
+        "question": "Who is the senior wellness coach at LNC?",
+        "answer": "Siva Gangadhar Reddy is a senior wellness coach specializing in comprehensive nutrition training and lifestyle guidance."
       },
       {
-        "question": "What is Coach Durga's approach to health and wellness?",
-        "answer": "Coach Durga focuses on empowering individuals with balanced nutrition knowledge, practical eating habits, and compassionate 1-on-1 coaching."
+        "question": "What is Coach Siva's approach to health and wellness?",
+        "answer": "Coach Siva focuses on empowering individuals with balanced nutrition knowledge, practical eating habits, and compassionate 1-on-1 coaching."
       },
       {
         "question": "How are 1-on-1 coaching sessions conducted?",
@@ -395,10 +395,10 @@
       },
       {
         "question": "Can I get guidance for specific health or fitness goals?",
-        "answer": "Yes! Coach Durga designs custom strategies tailored to your specific health objectives, body requirements, and daily routine."
+        "answer": "Yes! Coach Siva designs custom strategies tailored to your specific health objectives, body requirements, and daily routine."
       },
       {
-        "question": "How can I schedule a consultation with Coach Durga?",
+        "question": "How can I schedule a consultation with Coach Siva?",
         "answer": "You can fill out the enquiry form on our Contact page or call our team directly to book your initial consultation session."
       }
     ]
@@ -406,16 +406,16 @@
   "Contact": {
     "eyebrow": "Get Started",
     "heading": "Start Your Nutrition & Wellness Journey",
-    "subtext": "Have questions about our programs? Contact DNC Wellness Centre to learn more about our nutrition and wellness guidance.",
-    "business_info": "DNC Wellness Centre",
+    "subtext": "Have questions about our programs? Contact LSR Nutrition Club to learn more about our nutrition and wellness guidance.",
+    "business_info": "LSR Nutrition Club",
     "email_label": "Email",
     "phone_label": "Phone",
     "location_label": "Location",
-    "location_text": "DNC Wellness Centre",
+    "location_text": "LSR Nutrition Club",
     "location_link_text": "(View on Google Maps)",
     "form_heading": "Send an Enquiry",
     "form_success_heading": "Message Sent Successfully",
-    "form_success_text": "Thank you for contacting DNC Wellness Centre. We have received your enquiry and will get back to you soon.",
+    "form_success_text": "Thank you for contacting LSR Nutrition Club. We have received your enquiry and will get back to you soon.",
     "form_send_another": "Send Another Message",
     "form_name_label": "Full Name",
     "form_name_placeholder": "Enter your full name",
@@ -445,20 +445,20 @@
     "subtext": "Everything you need to know about our personalized nutrition approach, wellness programs, and coaching guidance.",
     "faqs": [
       {
-        "question": "What is the core philosophy of DNC Wellness Centre?",
-        "answer": "DNC focuses on sustainable, evidence-based nutrition and lifestyle changes rather than quick fixes, restrictive fad diets, or starvation."
+        "question": "What is the core philosophy of LSR Nutrition Club?",
+        "answer": "LNC focuses on sustainable, evidence-based nutrition and lifestyle changes rather than quick fixes, restrictive fad diets, or starvation."
       },
       {
         "question": "Will I regain weight after stopping the nutrition program?",
         "answer": "Once you reach your ideal weight, you will have adopted sustainable food habits and lifestyle changes, enabling you to maintain your weight long-term without regaining it."
       },
       {
-        "question": "Who can benefit from DNC nutrition guidance?",
+        "question": "Who can benefit from LNC nutrition guidance?",
         "answer": "Anyone looking to improve health, manage weight, develop mindful eating habits, optimize daily nutrition, or get personalized lifestyle support."
       },
       {
         "question": "Are the nutrition plans customized for Indian regional home food?",
-        "answer": "Yes! All DNC plans are customized around your existing regional food habits, daily schedule, and home-cooked Indian meals so adherence is effortless."
+        "answer": "Yes! All LNC plans are customized around your existing regional food habits, daily schedule, and home-cooked Indian meals so adherence is effortless."
       },
       {
         "question": "Do I need to buy expensive imported food or special supplements?",
@@ -466,7 +466,7 @@
       },
       {
         "question": "How are 1-on-1 coaching sessions and progress check-ins conducted?",
-        "answer": "Coaching is conducted via personalized consultations, detailed dietary assessments, weekly progress tracking, and ongoing 1-on-1 support from Coach Durga."
+        "answer": "Coaching is conducted via personalized consultations, detailed dietary assessments, weekly progress tracking, and ongoing 1-on-1 support from Coach Siva."
       },
       {
         "question": "How do I choose the right program for my personal health goals?",
@@ -475,9 +475,9 @@
     ]
   },
   "Showcase": {
-    "eyebrow": "Life at DNC",
+    "eyebrow": "Life at LNC",
     "heading": "Wellness & Transformation Showcase",
-    "subtext": "Explore real moments, program highlights, and healthy lifestyle transformations at DNC Wellness Centre.",
+    "subtext": "Explore real moments, program highlights, and healthy lifestyle transformations at LSR Nutrition Club.",
     "items": [
       {
         "title": "Personalized Diet Planning",
@@ -506,7 +506,7 @@
     ]
   },
   "Footer": {
-    "brand_name": "DNC Wellness Centre",
+    "brand_name": "LSR Nutrition Club",
     "tagline": "Personalized Nutrition & Healthy Food Habits",
     "quick_links": "Quick Links",
     "contact": "Contact Us",
@@ -514,7 +514,7 @@
     "all_rights_reserved": "All rights reserved."
   },
   "Metadata": {
-    "title": "DNC Wellness Centre | Personalized Nutrition & Wellness",
-    "description": "DNC Wellness Centre provides personalized nutrition guidance, healthy eating programs, weight management support, and holistic wellness guidance based on individual needs and lifestyle."
+    "title": "LSR Nutrition Club | Personalized Nutrition & Wellness",
+    "description": "LSR Nutrition Club provides personalized nutrition guidance, healthy eating programs, weight management support, and holistic wellness guidance based on individual needs and lifestyle."
   }
 }

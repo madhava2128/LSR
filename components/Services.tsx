@@ -58,7 +58,7 @@ export function Services() {
                   <Quote className="w-4 h-4 text-accent-green shrink-0 mt-0.5 fill-accent-green/20" />
                   <div>
                     <p className="text-xs italic text-text-dark font-medium leading-relaxed">
-                      "{t(`items.${key}.testimonial_quote`)}"
+                      &ldquo;{t(`items.${key}.testimonial_quote`)}&rdquo;
                     </p>
                     <p className="text-[11px] font-bold text-accent-green mt-1">
                       — {t(`items.${key}.testimonial_author`)}

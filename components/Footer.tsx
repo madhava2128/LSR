@@ -12,7 +12,7 @@ export function Footer() {
       {/* Background Subtle StrokeText - Spanning full footer broadly */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden flex items-center justify-center opacity-[0.08] sm:opacity-[0.12] select-none w-full h-full">
         <StrokeText 
-          text="DNC WELLNESS"
+          text="LSR NUTRITION"
           strokeColor="#8BBB92"
           fillColor="#CAE8BD"
           strokeWidth={1.8}
@@ -37,8 +37,8 @@ export function Footer() {
           <div className="sm:col-span-2">
             <Link href="/" className="inline-flex items-center gap-3 text-white mb-4 sm:mb-6 group">
               <Image 
-                src="/images/logo/logo.webp" 
-                alt="DNC Wellness Centre" 
+                src="/images/logo/logo.svg" 
+                alt="LSR Nutrition Club" 
                 width={150} 
                 height={100} 
                 className="h-14 sm:h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105" 
@@ -52,7 +52,7 @@ export function Footer() {
             {/* Social Media Links */}
             <div className="flex items-center gap-3">
               <a 
-                href="https://www.instagram.com/durga.nutrition?utm_source=qr&stkn=NXQ5ajdxcDE2Ym5n" 
+                href="https://www.instagram.com/lsrnutrition?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw==" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -74,7 +74,7 @@ export function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://youtube.com/@dncorganization?si=gleytDMK9B98mUOO" 
+                href="https://youtube.com/@lsrnutrition" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -103,18 +103,13 @@ export function Footer() {
             <h4 className="font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">{t('contact')}</h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-text-muted">
               <li>
-                <a href="mailto:durganutrition01@gmail.com" className="hover:text-primary-green transition-colors truncate block">
-                  durganutrition01@gmail.com
+                <a href="mailto:lsrnutrition@gmail.com" className="hover:text-primary-green transition-colors truncate block">
+                  lsrnutrition@gmail.com
                 </a>
               </li>
               <li>
-                <a href="tel:7981566705" className="hover:text-primary-green transition-colors">
-                  +91 79815 66705
-                </a>
-              </li>
-              <li>
-                <a href="tel:7416082977" className="hover:text-primary-green transition-colors">
-                  +91 74160 82977
+                <a href="tel:8639510702" className="hover:text-primary-green transition-colors">
+                  +91 86395 10702
                 </a>
               </li>
               <li>
@@ -133,7 +128,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} {t('brand_name')}. {t('all_rights_reserved')}</p>
           <div className="flex items-center gap-5">
             <a 
-              href="https://www.instagram.com/durga.nutrition?utm_source=qr&stkn=NXQ5ajdxcDE2Ym5n" 
+              href="https://www.instagram.com/lsrnutrition?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw==" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-text-muted hover:text-[#E4405F] transition-colors flex items-center gap-1.5"
@@ -155,7 +150,7 @@ export function Footer() {
               <span>Facebook</span>
             </a>
             <a 
-              href="https://youtube.com/@dncorganization?si=gleytDMK9B98mUOO" 
+              href="https://youtube.com/@lsrnutrition" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-text-muted hover:text-[#FF0000] transition-colors flex items-center gap-1.5"

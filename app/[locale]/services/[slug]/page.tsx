@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/routing';
 import { FAQAccordion, FAQItem } from '@/components/FAQAccordion';
 import { Button } from '@/components/Button';
-import { Quote, Star, CheckCircle2, TrendingUp, HelpCircle } from 'lucide-react';
+import { Quote, Star, CheckCircle2, TrendingUp } from 'lucide-react';
 
 // Valid program slugs
 const VALID_SLUGS = [
@@ -129,7 +129,7 @@ export default async function ProgramDetailPage({
         </div>
 
         {/* Client Testimonial Highlight Banner */}
-        <div className="bg-gradient-to-r from-accent-green/10 via-primary-green/10 to-transparent border border-primary-green/20 rounded-3xl p-8 mb-12 flex flex-col md:flex-row items-center gap-6">
+        <div className="bg-linear-to-r from-accent-green/10 via-primary-green/10 to-transparent border border-primary-green/20 rounded-3xl p-8 mb-12 flex flex-col md:flex-row items-center gap-6">
           <div className="w-14 h-14 rounded-2xl bg-accent-green text-white flex items-center justify-center shrink-0 shadow-md">
             <Quote className="w-7 h-7 fill-white/20" />
           </div>
@@ -141,7 +141,7 @@ export default async function ProgramDetailPage({
               <span className="text-xs font-bold text-accent-green ml-2 uppercase tracking-wider">Client Success Story</span>
             </div>
             <p className="text-text-dark font-medium italic text-lg sm:text-xl leading-relaxed mb-2">
-              "{t('testimonial_quote')}"
+              &ldquo;{t('testimonial_quote')}&rdquo;
             </p>
             <p className="text-sm font-bold text-accent-green">
               — {t('testimonial_author')}
@@ -186,7 +186,7 @@ export default async function ProgramDetailPage({
             </ul>
 
             <div className="pt-6 border-t border-gray-100">
-              <h4 className="text-sm font-bold text-primary-green uppercase tracking-wider mb-2">Who It's For</h4>
+              <h4 className="text-sm font-bold text-primary-green uppercase tracking-wider mb-2">Who It&apos;s For</h4>
               <p className="text-text-muted text-sm leading-relaxed">{t('who_its_for')}</p>
             </div>
           </div>

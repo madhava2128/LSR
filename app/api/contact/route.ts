@@ -5,17 +5,17 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { name, phone, email, program, message } = body;
 
-    // Primary: Direct email delivery to durganutrition01@gmail.com via FormSubmit AJAX
-    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/durganutrition01@gmail.com", {
+    // Primary: Direct email delivery via FormSubmit AJAX
+    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/lsrnutrition@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "Referer": "https://dncwellness.com",
-        "Origin": "https://dncwellness.com"
+        "Referer": "https://lsrnutritionclub.com",
+        "Origin": "https://lsrnutritionclub.com"
       },
       body: JSON.stringify({
-        _subject: `New DNC Wellness Enquiry from ${name}`,
+        _subject: `New LSR Nutrition Club Enquiry from ${name}`,
         _template: "table",
         Name: name,
         Phone: phone || "Not provided",
@@ -38,8 +38,8 @@ export async function POST(request: Request) {
         },
         body: JSON.stringify({
           access_key: accessKey,
-          subject: `New DNC Wellness Enquiry from ${name}`,
-          from_name: "DNC Wellness Website",
+          subject: `New LSR Nutrition Club Enquiry from ${name}`,
+          from_name: "LSR Nutrition Club Website",
           name,
           phone,
           email,
@@ -50,7 +50,7 @@ export async function POST(request: Request) {
     }
 
     return NextResponse.json({ success: true, data });
-  } catch (error) {
+  } catch {
     return NextResponse.json({ success: false, message: "Failed to send email enquiry" }, { status: 500 });
   }
 }

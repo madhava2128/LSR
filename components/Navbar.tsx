@@ -80,29 +80,29 @@ export function Navbar() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span className="font-medium tracking-wide truncate max-w-[200px] sm:max-w-none">Gajularamaram, Hyderabad</span>
+            <span className="font-medium tracking-wide truncate max-w-50 sm:max-w-none">Gajularamaram, Hyderabad</span>
           </div>
 
           {/* Contact Details */}
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
-            <a href="tel:7981566705" className="flex items-center gap-1 hover:text-[#CAE8BD] transition-colors">
+            <a href="tel:8639510702" className="flex items-center gap-1 hover:text-[#CAE8BD] transition-colors">
               <svg className="w-3.5 h-3.5 text-[#8BBB92] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span className="font-semibold">+91 79815 66705</span>
+              <span className="font-semibold">+91 86395 10702</span>
             </a>
 
-            <a href="mailto:durganutrition01@gmail.com" className="hidden md:flex items-center gap-1.5 hover:text-[#CAE8BD] transition-colors">
+            <a href="mailto:lsrnutrition@gmail.com" className="hidden md:flex items-center gap-1.5 hover:text-[#CAE8BD] transition-colors">
               <svg className="w-3.5 h-3.5 text-[#8BBB92] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>durganutrition01@gmail.com</span>
+              <span>lsrnutrition@gmail.com</span>
             </a>
 
             {/* Social Icons */}
             <div className="flex items-center gap-2.5 border-l border-white/20 pl-2.5 sm:pl-4">
               <a 
-                href="https://www.instagram.com/durga.nutrition?utm_source=qr&stkn=NXQ5ajdxcDE2Ym5n" 
+                href="https://www.instagram.com/lsrnutrition?utm_source=ig_web_button_share_sheet&exln=ZDNlZDc0MzIxNw==" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -124,9 +124,9 @@ export function Navbar() {
                 </svg>
               </a>
               <a 
-                href="https://youtube.com/@dncorganization?si=gleytDMK9B98mUOO" 
+                href="https://youtube.com/@lsrnutrition" 
                 target="_blank" 
-                rel="noopener noreferrer"
+                rel="noopener noreferrer" 
                 aria-label="YouTube"
                 className="hover:text-[#FF0000] transition-colors"
               >
@@ -142,8 +142,8 @@ export function Navbar() {
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between transition-all duration-300 ${isScrolled ? 'py-2' : 'py-3'}`}>
         <Link href="/" onClick={handleHomeClick} className="flex items-center gap-2 group">
           <Image 
-            src="/images/logo/logo.webp" 
-            alt="DNC Wellness Centre" 
+            src="/images/logo/logo.svg" 
+            alt="LSR Nutrition Club" 
             width={135} 
             height={90} 
             className="h-10 sm:h-12 md:h-16 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-xs" 
@@ -222,7 +222,6 @@ export function Navbar() {
             >
               <option value="en" className="bg-[#8BBB92] text-white">English</option>
               <option value="te" className="bg-[#8BBB92] text-white">తెలుగు</option>
-              <option value="hi" className="bg-[#8BBB92] text-white">हिंदी</option>
             </select>
           </div>
         </nav>
@@ -237,7 +236,6 @@ export function Navbar() {
           >
             <option value="en" className="bg-[#8BBB92] text-white">EN</option>
             <option value="te" className="bg-[#8BBB92] text-white">TE</option>
-            <option value="hi" className="bg-[#8BBB92] text-white">HI</option>
           </select>
 
           <button 

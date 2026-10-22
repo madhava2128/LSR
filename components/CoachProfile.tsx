@@ -11,7 +11,7 @@ export function CoachProfile() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
 
           {/* Editorial Photo Side (takes 5 cols for a sleek proportion) */}
-          <div className="lg:col-span-5 relative w-full aspect-[4/5] sm:aspect-[3/4] lg:aspect-auto lg:h-[540px] rounded-3xl sm:rounded-4xl overflow-hidden shadow-sm border border-primary-green/10 bg-primary-green/5 flex flex-col items-center justify-center">
+          <div className="lg:col-span-5 relative w-full aspect-4/5 sm:aspect-3/4 lg:aspect-auto lg:h-135 rounded-3xl sm:rounded-4xl overflow-hidden shadow-sm border border-primary-green/10 bg-primary-green/5 flex flex-col items-center justify-center">
             <Image
               src="/images/services/coach.webp"
               alt={t('name')}
