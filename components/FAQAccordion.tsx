@@ -43,7 +43,7 @@ export function FAQAccordion({ title = "Frequently Asked Questions", faqs, class
             >
               <button
                 onClick={() => toggle(idx)}
-                className="w-full text-left px-4 py-4 sm:px-6 sm:py-5 min-h-[44px] flex justify-between items-center gap-3 sm:gap-4 focus:outline-none cursor-pointer"
+                className="w-full text-left px-4 py-4 sm:px-6 sm:py-5 min-h-11 flex justify-between items-center gap-3 sm:gap-4 focus:outline-none cursor-pointer"
                 aria-expanded={isOpen}
               >
                 <span className="font-heading font-semibold text-sm sm:text-base md:text-lg text-text-dark leading-snug">

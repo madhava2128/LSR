@@ -205,7 +205,7 @@ export function ShowcaseCarousel() {
             <button
               onClick={() => setIsPlaying((prev) => !prev)}
               aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
-              className="min-h-[44px] px-4 py-2 rounded-full bg-white border border-border-subtle text-xs font-semibold text-text-dark hover:bg-sage-light transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
+              className="min-h-11 px-4 py-2 rounded-full bg-white border border-border-subtle text-xs font-semibold text-text-dark hover:bg-sage-light transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
             >
               {isPlaying ? (
                 <>
@@ -242,7 +242,7 @@ export function ShowcaseCarousel() {
                 key={i}
                 onClick={() => setActiveIndex(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className="p-2 flex items-center justify-center cursor-pointer min-h-[44px]"
+                className="p-2 flex items-center justify-center cursor-pointer min-h-11"
               >
                 <span
                   className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 block ${

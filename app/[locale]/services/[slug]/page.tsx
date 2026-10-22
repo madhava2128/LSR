@@ -85,7 +85,7 @@ export default async function ProgramDetailPage({
           <span>/</span>
           <Link href="/services" className="hover:text-primary transition-colors">Programs</Link>
           <span>/</span>
-          <span className="text-text-dark font-semibold truncate max-w-[200px] sm:max-w-none">{t('title')}</span>
+          <span className="text-text-dark font-semibold truncate max-w-50 sm:max-w-none">{t('title')}</span>
         </div>
 
         {/* Hero Header Section */}
@@ -209,7 +209,7 @@ export default async function ProgramDetailPage({
             Book your consultation today and take the first step toward personalized nutrition and sustainable wellness.
           </p>
           <Link href="/contact" className="inline-block w-full sm:w-auto">
-            <button className="w-full sm:w-auto min-h-[44px] py-3.5 px-8 text-sm sm:text-base font-semibold rounded-full bg-white text-primary hover:bg-sage-light hover:text-primary-hover shadow-xs transition-all active:scale-[0.99] cursor-pointer">
+            <button className="w-full sm:w-auto min-h-11 py-3.5 px-8 text-sm sm:text-base font-semibold rounded-full bg-white text-primary hover:bg-sage-light hover:text-primary-hover shadow-xs transition-all active:scale-[0.99] cursor-pointer">
               Get Started with This Program
             </button>
           </Link>

@@ -38,7 +38,7 @@ export function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <HeadingTag id={id} className={`${isHero ? 'hero-heading' : 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl'} font-heading font-bold mb-3 sm:mb-4 leading-tight break-words ${
+      <HeadingTag id={id} className={`${isHero ? 'hero-heading' : 'text-2xl sm:text-3xl md:text-4xl lg:text-5xl'} font-heading font-bold mb-3 sm:mb-4 leading-tight wrap-break-word ${
         inverted ? 'text-white' : 'text-text-dark'
       }`}>
         {heading}

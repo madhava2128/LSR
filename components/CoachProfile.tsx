@@ -29,7 +29,7 @@ export function CoachProfile() {
             </span>
 
             <div className="relative mb-2 sm:mb-3 w-max max-w-full">
-              <h2 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-text-dark break-words">
+              <h2 className="text-2xl sm:text-4xl md:text-5xl font-heading font-bold text-text-dark wrap-break-word">
                 {t('name')}
               </h2>
               {/* Teal underline accent */}

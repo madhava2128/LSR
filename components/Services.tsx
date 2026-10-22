@@ -68,7 +68,7 @@ export function Services() {
 
                 <Link 
                   href={`/services/${PROGRAM_SLUGS[key]}`}
-                  className="text-primary font-semibold text-sm inline-flex items-center gap-2 py-2 min-h-[44px] group-hover:text-primary-hover transition-colors"
+                  className="text-primary font-semibold text-sm inline-flex items-center gap-2 py-2 min-h-11 group-hover:text-primary-hover transition-colors"
                 >
                   {t('learn_more')}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

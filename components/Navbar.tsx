@@ -287,14 +287,14 @@ export function Navbar() {
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-primary/98 backdrop-blur-xl text-white shadow-2xl py-4 px-4 sm:px-6 flex flex-col gap-1 border-t border-white/15 max-h-[calc(100dvh-5rem)] overflow-y-auto">
-          <Link href="/" onClick={handleHomeClickMobile} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('home')}</Link>
-          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('about')}</Link>
+          <Link href="/" onClick={handleHomeClickMobile} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-11 flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('home')}</Link>
+          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-11 flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('about')}</Link>
 
           {/* Mobile Programs Accordion */}
           <div className="border-b border-white/10 py-1">
             <button
               onClick={() => setIsMobileProgramsOpen(prev => !prev)}
-              className="w-full flex items-center justify-between text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] text-base font-semibold focus:outline-none rounded-xl active:bg-white/10 transition-colors"
+              className="w-full flex items-center justify-between text-white hover:text-accent-gold px-3 py-2.5 min-h-11 text-base font-semibold focus:outline-none rounded-xl active:bg-white/10 transition-colors"
               aria-expanded={isMobileProgramsOpen}
             >
               <span>{t('services')}</span>
@@ -312,7 +312,7 @@ export function Navbar() {
                 <Link
                   href="/services"
                   onClick={() => { setIsMobileMenuOpen(false); setIsMobileProgramsOpen(false); }}
-                  className="text-sm font-bold text-accent-gold px-3 py-2 min-h-[40px] flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
+                  className="text-sm font-bold text-accent-gold px-3 py-2 min-h-10 flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
                 >
                   <span>→</span> All Programs
                 </Link>
@@ -321,7 +321,7 @@ export function Navbar() {
                     key={prog.slug}
                     href={`/services/${prog.slug}`}
                     onClick={() => { setIsMobileMenuOpen(false); setIsMobileProgramsOpen(false); }}
-                    className="text-sm text-white/90 hover:text-accent-gold px-3 py-2 min-h-[40px] flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
+                    className="text-sm text-white/90 hover:text-accent-gold px-3 py-2 min-h-10 flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
                   >
                     <span className="text-secondary font-bold">{prog.num}.</span>
                     {prog.label}
@@ -331,15 +331,15 @@ export function Navbar() {
             )}
           </div>
 
-          <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('testimonials')}</Link>
-          <Link href="/coach" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('coach')}</Link>
-          <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold rounded-xl active:bg-white/10 transition-colors">{t('contact')}</Link>
+          <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-11 flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('testimonials')}</Link>
+          <Link href="/coach" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-11 flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('coach')}</Link>
+          <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-11 flex items-center text-base font-semibold rounded-xl active:bg-white/10 transition-colors">{t('contact')}</Link>
 
           {/* Quick Direct Call Button */}
           <div className="pt-3 mt-2 border-t border-white/15 flex flex-col gap-2">
             <a 
               href="tel:8639510702"
-              className="w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/15 text-white font-semibold text-sm hover:bg-white/25 active:scale-98 transition-all"
+              className="w-full min-h-11 flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/15 text-white font-semibold text-sm hover:bg-white/25 active:scale-98 transition-all"
             >
               <svg className="w-4 h-4 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
