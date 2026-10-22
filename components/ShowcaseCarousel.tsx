@@ -7,14 +7,12 @@ import { SectionHeading } from './SectionHeading';
 import { useTranslations } from 'next-intl';
 
 const CAROUSEL_IMAGES = [
-  { id: 1, src: '/images/showcase/1.webp' },
-  { id: 2, src: '/images/showcase/2.webp' },
-  { id: 3, src: '/images/showcase/3.webp' },
-  { id: 4, src: '/images/showcase/4.webp' },
-  { id: 5, src: '/images/showcase/5.webp' },
-  { id: 6, src: '/images/showcase/6.webp' },
-  { id: 7, src: '/images/showcase/7.webp' },
-  { id: 8, src: '/images/showcase/8.webp' },
+  { id: 'a', src: '/images/carousels/a.webp' },
+  { id: 'b', src: '/images/carousels/b.webp' },
+  { id: 'c', src: '/images/carousels/c.webp' },
+  { id: 'd', src: '/images/carousels/d.webp' },
+  { id: 'e', src: '/images/carousels/e.webp' },
+  { id: 'f', src: '/images/carousels/f.webp' },
 ];
 
 export function ShowcaseCarousel() {
