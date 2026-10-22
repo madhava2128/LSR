@@ -225,7 +225,7 @@ export function Contact() {
                 </div>
                 <h4 className="font-heading font-bold text-lg text-text-dark">{t('form_success')}</h4>
                 <p className="text-text-muted text-xs sm:text-sm max-w-sm">
-                  Thank you! Coach Siva will get in touch with you shortly.
+                  {t('form_success_text')}
                 </p>
                 <Button 
                   variant="outline" 
