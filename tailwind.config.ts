@@ -8,15 +8,24 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FAFDF9",
-        "primary-green": "#7FBF8C",
-        "accent-green": "#3E7C4A",
-        "text-dark": "#1F2A1F",
-        "text-muted": "#6B7A6E",
+        primary: "#155E59",
+        "primary-hover": "#104A46",
+        secondary: "#8BAF9B",
+        "sage-light": "#EAF2EC",
+        background: "#FAF9F6",
+        surface: "#FFFFFF",
+        "text-dark": "#202B29",
+        "text-muted": "#5E6B66",
+        "border-subtle": "#DDE5DF",
+        "accent-gold": "#D6A66A",
+        // Semantic aliases
+        "primary-green": "#155E59",
+        "accent-green": "#8BAF9B",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        heading: ["var(--font-poppins)", "sans-serif"],
+        body: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-plus-jakarta-sans)", "sans-serif"],
         telugu: ["var(--font-telugu)", "sans-serif"],
       },
     },

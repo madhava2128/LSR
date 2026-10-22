@@ -19,13 +19,13 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="w-full py-24 bg-white relative">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
+    <section id="faq" className="w-full py-14 sm:py-20 md:py-24 bg-white relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12">
         <SectionHeading 
           eyebrow={t('eyebrow')}
           heading={t('heading')}
           subtext={t('subtext')}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         />
 
         <div className="space-y-4">
@@ -36,20 +36,20 @@ export function FAQ() {
                 key={index} 
                 className={`border rounded-2xl transition-all duration-200 overflow-hidden ${
                   isOpen 
-                    ? 'border-primary-green bg-primary-green/5 shadow-sm' 
-                    : 'border-gray-200 bg-white hover:border-primary-green/40'
+                    ? 'border-primary bg-sage-light/40 shadow-xs' 
+                    : 'border-border-subtle bg-white hover:border-secondary/60'
                 }`}
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full py-5 px-6 md:px-8 text-left flex justify-between items-center gap-4 focus:outline-none"
+                  className="w-full py-5 px-6 md:px-8 text-left flex justify-between items-center gap-4 focus:outline-none cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-semibold text-lg md:text-xl text-text-dark leading-snug">
+                  <span className="font-heading font-semibold text-base sm:text-lg md:text-xl text-text-dark leading-snug">
                     {faq.question}
                   </span>
                   <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                    isOpen ? 'bg-primary-green text-white rotate-180' : 'bg-gray-100 text-text-muted'
+                    isOpen ? 'bg-primary text-white rotate-180' : 'bg-sage-light text-text-muted'
                   }`}>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -58,7 +58,7 @@ export function FAQ() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 md:px-8 pb-6 text-text-muted text-base md:text-lg leading-relaxed border-t border-primary-green/10 pt-4">
+                  <div className="px-6 md:px-8 pb-6 text-text-muted text-sm sm:text-base md:text-lg leading-relaxed border-t border-border-subtle/60 pt-4">
                     {faq.answer}
                   </div>
                 )}

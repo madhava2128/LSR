@@ -19,7 +19,7 @@ export function Services() {
   const programKeys = ['1', '2', '3', '4'];
 
   return (
-    <section id="services" className="w-full py-14 sm:py-20 md:py-24 bg-[#CAE8BD]">
+    <section id="services" className="w-full py-14 sm:py-20 md:py-24 bg-sage-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <SectionHeading 
           eyebrow={t('eyebrow')}
@@ -30,20 +30,20 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {programKeys.map((key, index) => (
-            <Card key={key} className="flex flex-col h-full group p-6 sm:p-8 md:p-10 justify-between">
+            <Card key={key} className="flex flex-col h-full group p-6 sm:p-8 md:p-10 justify-between bg-white border border-border-subtle hover:border-secondary transition-all">
               <div>
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <span className="text-primary-green font-extrabold text-xs sm:text-sm tracking-widest uppercase">
+                  <span className="text-primary font-extrabold text-xs sm:text-sm tracking-widest uppercase">
                     0{index + 1} — {t('program_label')}
                   </span>
-                  <div className="flex items-center gap-0.5 text-amber-400">
+                  <div className="flex items-center gap-0.5 text-accent-gold">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
+                      <Star key={i} className="w-3.5 h-3.5 fill-accent-gold" />
                     ))}
                   </div>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-text-dark mb-3 sm:mb-4 group-hover:text-accent-green transition-colors">
+                <h3 className="text-xl sm:text-2xl font-bold font-heading text-text-dark mb-3 sm:mb-4 group-hover:text-primary transition-colors">
                   {t(`items.${key}.title`)}
                 </h3>
                 
@@ -54,13 +54,13 @@ export function Services() {
 
               <div>
                 {/* Client Testimonial Badge */}
-                <div className="mb-5 sm:mb-6 p-3.5 sm:p-4 rounded-2xl bg-primary-green/10 border border-primary-green/20 flex items-start gap-3">
-                  <Quote className="w-4 h-4 text-accent-green shrink-0 mt-0.5 fill-accent-green/20" />
+                <div className="mb-5 sm:mb-6 p-3.5 sm:p-4 rounded-2xl bg-sage-light/70 border border-border-subtle flex items-start gap-3">
+                  <Quote className="w-4 h-4 text-primary shrink-0 mt-0.5 fill-primary/20" />
                   <div>
                     <p className="text-xs italic text-text-dark font-medium leading-relaxed">
                       &ldquo;{t(`items.${key}.testimonial_quote`)}&rdquo;
                     </p>
-                    <p className="text-[11px] font-bold text-accent-green mt-1">
+                    <p className="text-[11px] font-bold text-primary mt-1">
                       — {t(`items.${key}.testimonial_author`)}
                     </p>
                   </div>
@@ -68,7 +68,7 @@ export function Services() {
 
                 <Link 
                   href={`/services/${PROGRAM_SLUGS[key]}`}
-                  className="text-accent-green font-bold text-sm inline-flex items-center gap-2 group-hover:text-primary-green transition-colors"
+                  className="text-primary font-semibold text-sm inline-flex items-center gap-2 group-hover:text-primary-hover transition-colors"
                 >
                   {t('learn_more')}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

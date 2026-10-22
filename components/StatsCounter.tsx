@@ -19,7 +19,7 @@ function StatItem({ target, suffix = '', label, icon, isVisible }: StatItemProps
     if (!isVisible) return;
 
     let startTime: number | null = null;
-    const duration = 3500; // Slower, smooth count-up animation (3.5 seconds)
+    const duration = 2500;
 
     const step = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
@@ -41,13 +41,13 @@ function StatItem({ target, suffix = '', label, icon, isVisible }: StatItemProps
 
   return (
     <div className="flex flex-col items-start text-left p-4 sm:p-6 md:p-8 group transition-all duration-300">
-      <div className="mb-4 sm:mb-5 p-3.5 sm:p-4 rounded-2xl bg-[#2B4C3B]/10 text-[#2B4C3B] border border-[#2B4C3B]/15 group-hover:bg-[#2B4C3B] group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
+      <div className="mb-4 sm:mb-5 p-3.5 sm:p-4 rounded-2xl bg-primary/10 text-primary border border-primary/15 group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300 shadow-xs">
         {icon}
       </div>
-      <div className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-text-dark tracking-tight mb-2">
+      <div className="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-text-dark tracking-tight mb-2">
         {count.toLocaleString()}{suffix}
       </div>
-      <div className="text-xs sm:text-sm md:text-base font-semibold text-text-muted">
+      <div className="text-xs sm:text-sm md:text-base font-medium text-text-muted">
         {label}
       </div>
     </div>
@@ -82,7 +82,7 @@ export function StatsCounter() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full py-14 sm:py-20 bg-[#CAE8BD] relative">
+    <section ref={sectionRef} className="w-full py-14 sm:py-20 bg-sage-light relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         <SectionHeading 
           eyebrow={t('eyebrow')}
@@ -92,8 +92,8 @@ export function StatsCounter() {
           className="mb-10 sm:mb-14"
         />
 
-        <div className="bg-white border border-[#B5D9A5] rounded-3xl p-4 sm:p-6 md:p-10 shadow-sm">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
+        <div className="bg-white border border-border-subtle rounded-3xl p-4 sm:p-6 md:p-10 shadow-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-border-subtle">
             
             {/* 1. Happy Clients */}
             <StatItem 

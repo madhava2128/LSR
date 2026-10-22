@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter, Noto_Sans_Telugu } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, Noto_Sans_Telugu } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
@@ -10,22 +10,25 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta-sans",
   subsets: ["latin"],
   weight: ["600", "700", "800"],
+  display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
 
 const telugu = Noto_Sans_Telugu({
   variable: "--font-telugu",
   subsets: ["telugu"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -72,9 +75,10 @@ export default async function RootLayout({
   return (
     <html
       lang={locale}
-      className={`${poppins.variable} ${inter.variable} ${telugu.variable} h-full antialiased`}
+      className={`${plusJakartaSans.variable} ${inter.variable} ${telugu.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className={`min-h-full flex flex-col bg-white ${fontClass}`}>
+      <body className={`min-h-full flex flex-col bg-background text-text-dark ${fontClass}`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <div className="grow">

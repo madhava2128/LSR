@@ -2,35 +2,73 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --background: #FAFDF9;
-  --foreground: #1F2A1F;
+  --font-heading: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+
+  --color-primary: #155E59;
+  --color-primary-hover: #104A46;
+  --color-secondary: #8BAF9B;
+  --color-sage-light: #EAF2EC;
+  --color-background: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-text: #202B29;
+  --color-text-muted: #5E6B66;
+  --color-border: #DDE5DF;
+  --color-accent: #D6A66A;
+
+  --background: #FAF9F6;
+  --foreground: #202B29;
 }
 
 @theme {
-  --color-background: #FAFDF9;
-  --color-primary-green: #7FBF8C;
-  --color-accent-green: #3E7C4A;
-  --color-text-dark: #1F2A1F;
-  --color-text-muted: #6B7A6E;
+  --color-primary: #155E59;
+  --color-primary-hover: #104A46;
+  --color-secondary: #8BAF9B;
+  --color-sage-light: #EAF2EC;
+  --color-background: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-text-dark: #202B29;
+  --color-text-muted: #5E6B66;
+  --color-border-subtle: #DDE5DF;
+  --color-accent-gold: #D6A66A;
+
+  --color-primary-green: #155E59;
+  --color-accent-green: #8BAF9B;
+
+  --font-heading: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+}
+
+/* Base Headings & Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), inherit;
+  color: var(--color-text, #202B29);
+  letter-spacing: -0.015em;
+}
+
+/* Responsive Clamp Typography for Hero Heading */
+.hero-heading {
+  font-family: var(--font-heading), inherit;
+  font-size: clamp(2.25rem, 5vw + 1rem, 3.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
 /* Locale-based typography mapping */
 body.font-en {
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 body.font-te {
   font-family: var(--font-telugu), sans-serif;
-}
-
-/* Apply Poppins to headings natively in English, fall back gracefully for others */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins), inherit;
 }
 body.font-te h1, body.font-te h2, body.font-te h3, body.font-te h4, body.font-te h5, body.font-te h6 {
   font-family: var(--font-telugu), sans-serif;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
+  font-size: 16px;
+  line-height: 1.6;
 }
