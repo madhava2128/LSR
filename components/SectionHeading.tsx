@@ -1,6 +1,7 @@
 import React from 'react';
 
 export interface SectionHeadingProps {
+  id?: string;
   eyebrow?: string;
   heading: string;
   subtext?: string;
@@ -11,6 +12,7 @@ export interface SectionHeadingProps {
 }
 
 export function SectionHeading({ 
+  id,
   eyebrow, 
   heading, 
   subtext, 
@@ -34,7 +36,7 @@ export function SectionHeading({
           {eyebrow}
         </span>
       )}
-      <h2 className={`${isHero ? 'hero-heading' : 'text-3xl sm:text-4xl lg:text-5xl'} font-heading font-bold mb-4 sm:mb-5 leading-tight ${
+      <h2 id={id} className={`${isHero ? 'hero-heading' : 'text-3xl sm:text-4xl lg:text-5xl'} font-heading font-bold mb-4 sm:mb-5 leading-tight ${
         inverted ? 'text-white' : 'text-text-dark'
       }`}>
         {heading}

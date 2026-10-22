@@ -2,7 +2,6 @@
 @config "../tailwind.config.ts";
 
 :root {
-  --font-lora: var(--font-lora), "Lora", Georgia, Cambria, serif;
   --font-heading: var(--font-lora), "Lora", Georgia, serif;
   --font-body: var(--font-lora), "Lora", Georgia, serif;
 
@@ -79,4 +78,8 @@ body {
 /* Ensure all interactive, form, and text elements consistently inherit Lora */
 button, input, textarea, select, nav, a, p, span, li, label {
   font-family: inherit;
+}
+
+.font-heading, .font-lora, .font-serif {
+  font-family: var(--font-lora), "Lora", Georgia, serif;
 }
