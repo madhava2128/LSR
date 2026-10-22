@@ -113,9 +113,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://maps.app.goo.gl/a3oAPCX2xBmKvZot8" target="_blank" rel="noopener noreferrer" className="hover:text-accent-gold transition-colors leading-relaxed block mt-1">
-                  {t('brand_name')}<br/>
-                  {t('view_on_maps')}
+                <a 
+                  href="https://maps.app.goo.gl/TjfpgBFxkFq3RDKq9" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-accent-gold transition-colors leading-relaxed block mt-1"
+                >
+                  <span className="text-white font-medium block">LSR NUTRITION CENTER</span>
+                  <span className="text-[#EAF2EC]/80 block text-xs">
+                    G.F Justin photo studio, opp. Aqua water purifier,<br />
+                    Mahankhali nagar, Shamshiguda — 500072
+                  </span>
+                  <span className="text-accent-gold text-xs underline mt-1 inline-block">{t('view_on_maps')}</span>
                 </a>
               </li>
             </ul>

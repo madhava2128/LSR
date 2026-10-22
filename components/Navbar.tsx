@@ -75,13 +75,18 @@ export function Navbar() {
       <div className="bg-primary-hover text-[#EAF2EC] text-[11px] sm:text-xs md:text-sm py-1.5 px-4 sm:px-6 md:px-12 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
           {/* Address */}
-          <div className="flex items-center gap-1.5">
+          <a 
+            href="https://maps.app.goo.gl/TjfpgBFxkFq3RDKq9" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex items-center gap-1.5 hover:text-accent-gold transition-colors"
+          >
             <svg className="w-3.5 h-3.5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span className="font-medium tracking-wide truncate max-w-50 sm:max-w-none">Gajularamaram, Hyderabad</span>
-          </div>
+            <span className="font-medium tracking-wide truncate max-w-50 sm:max-w-none">Shamshiguda, Hyderabad</span>
+          </a>
 
           {/* Contact Details */}
           <div className="flex items-center gap-3 sm:gap-4 md:gap-6">

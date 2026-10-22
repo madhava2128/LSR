@@ -136,17 +136,20 @@ export function Contact() {
                 <div>
                   <h4 className="text-[11px] sm:text-xs font-bold text-primary uppercase tracking-widest mb-1.5 sm:mb-2">{t('location_label')}</h4>
                   <a 
-                    href="https://maps.app.goo.gl/a3oAPCX2xBmKvZot8" 
+                    href="https://maps.app.goo.gl/TjfpgBFxkFq3RDKq9" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-text-dark hover:text-primary transition-colors font-medium flex items-start gap-2.5 text-sm sm:text-base"
+                    className="text-text-dark hover:text-primary transition-colors font-medium flex items-start gap-2.5 text-sm sm:text-base leading-relaxed"
                   >
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-secondary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-secondary shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                     <span>
-                      Near Anjaneya Swamy Temple, Markandeya Nagar, IDA Bollaram Rd, opp. water tank, Rajiv Gandhi Nagar, Gajularamaram, Hyderabad, Telangana 500055
+                      <strong className="text-text-dark font-semibold block">LSR NUTRITION CENTER</strong>
+                      G.F Justin photo studio, opp. Aqua water purifier,<br />
+                      Mahankhali Nagar, Shamshiguda,<br />
+                      Hyderabad, Telangana — 500072
                     </span>
                   </a>
                 </div>
@@ -200,8 +203,8 @@ export function Contact() {
                 style={{ border: 0 }} 
                 loading="lazy" 
                 allowFullScreen 
-                src="https://maps.google.com/maps?q=LSR%20Nutrition%20Club&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                title="Google Maps Location"
+                src="https://maps.google.com/maps?q=LSR%20NUTRITION%20CENTER%2C%20Mahankhali%20nagar%2C%20Shamshiguda%2C%20500072&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                title="Google Maps Location - LSR Nutrition Center"
               ></iframe>
             </div>
           </div>
