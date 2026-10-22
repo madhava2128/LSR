@@ -43,7 +43,7 @@ export function SectionHeading({
       </h2>
       {subtext && (
         <p className={`text-base sm:text-lg md:text-xl leading-relaxed ${
-          inverted ? 'text-[#EAF2EC]' : 'text-text-muted'
+          inverted ? 'text-sage-light' : 'text-text-muted'
         }`}>
           {subtext}
         </p>

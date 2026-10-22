@@ -72,7 +72,7 @@ export function Navbar() {
       }`}
     >
       {/* Top Contact & Location Bar */}
-      <div className="bg-primary-hover text-[#EAF2EC] text-[11px] sm:text-xs md:text-sm py-1.5 px-4 sm:px-6 md:px-12 border-b border-white/10">
+      <div className="bg-primary-hover text-sage-light text-[11px] sm:text-xs md:text-sm py-1.5 px-4 sm:px-6 md:px-12 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
           {/* Address */}
           <a 

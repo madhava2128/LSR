@@ -205,7 +205,7 @@ export default async function ProgramDetailPage({
           <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">
             Ready to Transform Your Health?
           </h3>
-          <p className="text-[#EAF2EC] text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sage-light text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
             Book your consultation today and take the first step toward personalized nutrition and sustainable wellness.
           </p>
           <Link href="/contact">
