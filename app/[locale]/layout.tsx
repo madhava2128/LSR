@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Lora, Noto_Sans_Telugu } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
@@ -9,6 +9,13 @@ import { routing } from '@/i18n/routing';
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#155E59",
+};
 
 const lora = Lora({
   variable: "--font-lora",
@@ -71,10 +78,10 @@ export default async function RootLayout({
       className={`${lora.variable} ${telugu.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className={`min-h-full flex flex-col bg-background text-text-dark ${fontClass}`}>
+      <body className={`min-h-full flex flex-col bg-background text-text-dark ${fontClass} overflow-x-hidden`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          <div className="grow">
+          <div className="grow overflow-x-hidden">
             {children}
           </div>
           <Footer />

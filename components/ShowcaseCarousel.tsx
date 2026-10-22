@@ -195,7 +195,7 @@ export function ShowcaseCarousel() {
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-border-subtle text-text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
+              className="w-11 h-11 rounded-full bg-white border border-border-subtle text-text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
             >
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
@@ -205,7 +205,7 @@ export function ShowcaseCarousel() {
             <button
               onClick={() => setIsPlaying((prev) => !prev)}
               aria-label={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
-              className="px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white border border-border-subtle text-xs font-semibold text-text-dark hover:bg-sage-light transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
+              className="min-h-[44px] px-4 py-2 rounded-full bg-white border border-border-subtle text-xs font-semibold text-text-dark hover:bg-sage-light transition-all flex items-center gap-1.5 shadow-xs cursor-pointer"
             >
               {isPlaying ? (
                 <>
@@ -227,7 +227,7 @@ export function ShowcaseCarousel() {
             <button
               onClick={nextSlide}
               aria-label="Next Slide"
-              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white border border-border-subtle text-text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
+              className="w-11 h-11 rounded-full bg-white border border-border-subtle text-text-dark flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-xs hover:scale-105 active:scale-95 cursor-pointer"
             >
               <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
@@ -235,19 +235,23 @@ export function ShowcaseCarousel() {
             </button>
           </div>
 
-          {/* Pagination Indicators (Dots) */}
-          <div className="flex items-center gap-2">
+          {/* Pagination Indicators (Dots) with expanded touch target */}
+          <div className="flex items-center gap-1.5">
             {CAROUSEL_IMAGES.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setActiveIndex(i)}
                 aria-label={`Go to slide ${i + 1}`}
-                className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                  i === activeIndex
-                    ? 'w-6 sm:w-8 bg-primary shadow-xs'
-                    : 'w-2 sm:w-2.5 bg-border-subtle hover:bg-secondary/60'
-                }`}
-              />
+                className="p-2 flex items-center justify-center cursor-pointer min-h-[44px]"
+              >
+                <span
+                  className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 block ${
+                    i === activeIndex
+                      ? 'w-6 sm:w-8 bg-primary shadow-xs'
+                      : 'w-2 sm:w-2.5 bg-border-subtle hover:bg-secondary/60'
+                  }`}
+                />
+              </button>
             ))}
           </div>
 

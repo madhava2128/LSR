@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Smile, Users, Award } from 'lucide-react';
+import { Smile, Users, Award, Sparkles } from 'lucide-react';
 import { SectionHeading } from './SectionHeading';
 
 interface StatItemProps {
@@ -72,7 +72,7 @@ function StatItem({ target, suffix = '', label, icon, isVisible, className = '' 
     <div
       role="group"
       aria-label={`${target}${suffix} ${label}`}
-      className={`bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-border-subtle shadow-xs hover:border-primary/25 hover:shadow-md transition-all duration-300 flex flex-col justify-between group ${className}`}
+      className={`bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 border border-border-subtle shadow-xs hover:border-primary/25 hover:shadow-md transition-all duration-300 flex flex-col justify-between group ${className}`}
     >
       {/* Screen reader complete label without intermediate counting numbers */}
       <span className="sr-only">
@@ -81,32 +81,32 @@ function StatItem({ target, suffix = '', label, icon, isVisible, className = '' 
 
       <div>
         {/* Minimal line icon container */}
-        <div className="w-12 h-12 rounded-2xl bg-sage-light text-primary flex items-center justify-center border border-border-subtle/80 mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-sage-light text-primary flex items-center justify-center border border-border-subtle/80 mb-4 sm:mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
           {icon}
         </div>
 
         {/* Primary numerical focus using Lora serif with tabular-nums to prevent layout shifts */}
         <div
           aria-hidden="true"
-          className="flex items-baseline gap-0.5 text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-primary tracking-tight tabular-nums mb-2.5"
+          className="flex items-baseline gap-0.5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-primary tracking-tight tabular-nums mb-1.5 sm:mb-2"
         >
           <span>{count.toLocaleString()}</span>
           {suffix && (
-            <span className="text-2xl sm:text-3xl lg:text-4xl text-accent-gold font-heading font-semibold ml-0.5">
+            <span className="text-xl sm:text-2xl lg:text-3xl text-accent-gold font-heading font-semibold ml-0.5">
               {suffix}
             </span>
           )}
         </div>
 
         {/* Clear supporting label */}
-        <p className="text-sm sm:text-base font-medium text-text-muted leading-relaxed">
+        <p className="text-xs sm:text-sm font-medium text-text-muted leading-snug sm:leading-relaxed">
           {label}
         </p>
       </div>
 
       {/* Subtle muted gold accent line */}
       <div 
-        className="w-8 h-0.5 bg-accent-gold/40 rounded-full mt-6 group-hover:w-12 group-hover:bg-accent-gold transition-all duration-300"
+        className="w-6 sm:w-8 h-0.5 bg-accent-gold/40 rounded-full mt-4 sm:mt-6 group-hover:w-10 group-hover:bg-accent-gold transition-all duration-300"
         aria-hidden="true"
       />
     </div>
@@ -143,7 +143,7 @@ export function StatsCounter() {
   return (
     <section 
       ref={sectionRef} 
-      className="w-full py-16 sm:py-20 md:py-24 bg-sage-light relative overflow-hidden"
+      className="w-full py-14 sm:py-20 md:py-24 bg-sage-light relative overflow-hidden"
       aria-labelledby="stats-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
@@ -153,11 +153,11 @@ export function StatsCounter() {
           heading={t('heading')}
           subtext={t('subtext')}
           align="center"
-          className="mb-12 sm:mb-16"
+          className="mb-10 sm:mb-16"
         />
 
-        {/* Clean responsive layout: 1 col on mobile, 2 cols on tablet with balanced centering, 3 cols on desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        {/* Balanced responsive layout: 1 col on small phones (<360px), 2 cols on standard mobile (360px-1023px), 4 cols on desktop */}
+        <div className="grid grid-cols-1 min-[360px]:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-6 lg:gap-8 items-stretch">
           
           {/* 1. Happy Clients */}
           <StatItem 
@@ -165,7 +165,7 @@ export function StatsCounter() {
             suffix="+" 
             label={t('happy_clients')} 
             isVisible={isVisible}
-            icon={<Smile className="w-6 h-6" strokeWidth={1.75} />}
+            icon={<Smile className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.75} />}
           />
 
           {/* 2. People Enrolled */}
@@ -174,7 +174,7 @@ export function StatsCounter() {
             suffix="+" 
             label={t('people_enrolled')} 
             isVisible={isVisible}
-            icon={<Users className="w-6 h-6" strokeWidth={1.75} />}
+            icon={<Users className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.75} />}
           />
 
           {/* 3. Client Satisfaction */}
@@ -183,8 +183,16 @@ export function StatsCounter() {
             suffix="%" 
             label={t('satisfaction')} 
             isVisible={isVisible}
-            className="sm:col-span-2 sm:max-w-md sm:mx-auto lg:max-w-none lg:col-span-1 w-full"
-            icon={<Award className="w-6 h-6" strokeWidth={1.75} />}
+            icon={<Award className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.75} />}
+          />
+
+          {/* 4. Wellness Programs */}
+          <StatItem 
+            target={4} 
+            suffix="" 
+            label={t('wellness_programs')} 
+            isVisible={isVisible}
+            icon={<Sparkles className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.75} />}
           />
 
         </div>

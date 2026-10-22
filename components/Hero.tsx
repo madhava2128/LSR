@@ -13,7 +13,7 @@ export function Hero() {
   const t = useTranslations('Hero');
 
   return (
-    <section className="relative w-full pt-32 pb-16 sm:pt-36 sm:pb-24 md:pt-40 md:pb-28 overflow-hidden bg-linear-to-br from-background via-background to-sage-light">
+    <section className="relative w-full pt-28 pb-14 sm:pt-36 sm:pb-24 md:pt-40 md:pb-28 overflow-hidden bg-linear-to-br from-background via-background to-sage-light">
       {/* Subtle organic sage blurred ambient background shape */}
       <div 
         className="absolute -top-32 -right-32 w-87.5 sm:w-150 h-87.5 sm:h-150 bg-secondary/15 rounded-full blur-3xl pointer-events-none"
@@ -25,7 +25,7 @@ export function Hero() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
           
           {/* Text Content Column */}
           <motion.div 
@@ -40,17 +40,17 @@ export function Hero() {
               heading={t('heading')}
               subtext={t('subtext')}
               isHero={true}
-              className="mb-6 sm:mb-8"
+              className="mb-5 sm:mb-8"
             />
             
             <div className="flex flex-col sm:flex-row w-full sm:w-auto gap-3 sm:gap-4 mb-6 sm:mb-8">
               <Link href="/coach" className="w-full sm:w-auto">
-                <Button variant="primary" className="w-full sm:w-auto py-3.5 px-8 text-base font-semibold">
+                <Button variant="primary" className="w-full sm:w-auto py-3.5 px-6 sm:px-8 text-sm sm:text-base font-semibold">
                   {t('cta_primary')}
                 </Button>
               </Link>
               <Link href="/services" className="w-full sm:w-auto">
-                <Button variant="outline" className="w-full sm:w-auto py-3.5 px-8 text-base font-semibold">
+                <Button variant="outline" className="w-full sm:w-auto py-3.5 px-6 sm:px-8 text-sm sm:text-base font-semibold">
                   {t('cta_outline')}
                 </Button>
               </Link>

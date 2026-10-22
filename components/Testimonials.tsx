@@ -47,7 +47,7 @@ export function Testimonials({ limit }: TestimonialsProps = {}) {
           {/* Grid featuring large image-first transformation cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
             {testimonialKeys.map((key) => (
-              <Card key={key} className="p-0 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300 rounded-3xl border border-border-subtle bg-white">
+              <Card key={key} className="p-0 overflow-hidden flex flex-col group hover:shadow-lg transition-all duration-300 rounded-2xl sm:rounded-3xl border border-border-subtle bg-white">
 
                 {/* Featured Transformation Image */}
                 <div className="relative w-full h-64 sm:h-80 md:h-96 bg-white overflow-hidden">

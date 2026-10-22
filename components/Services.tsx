@@ -30,7 +30,7 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {programKeys.map((key, index) => (
-            <Card key={key} className="flex flex-col h-full group p-6 sm:p-8 md:p-10 justify-between bg-white border border-border-subtle hover:border-secondary transition-all">
+            <Card key={key} className="flex flex-col h-full group p-5 sm:p-8 md:p-10 justify-between bg-white border border-border-subtle hover:border-secondary transition-all">
               <div>
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <span className="text-primary font-extrabold text-xs sm:text-sm tracking-widest uppercase">
@@ -68,7 +68,7 @@ export function Services() {
 
                 <Link 
                   href={`/services/${PROGRAM_SLUGS[key]}`}
-                  className="text-primary font-semibold text-sm inline-flex items-center gap-2 group-hover:text-primary-hover transition-colors"
+                  className="text-primary font-semibold text-sm inline-flex items-center gap-2 py-2 min-h-[44px] group-hover:text-primary-hover transition-colors"
                 >
                   {t('learn_more')}
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

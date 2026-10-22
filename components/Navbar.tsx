@@ -43,6 +43,30 @@ export function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Handle Escape key to close mobile menu & programs dropdown
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        setIsProgramsOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  // Prevent background scroll when mobile drawer is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const changeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const nextLocale = e.target.value;
     router.replace(pathname, { locale: nextLocale });
@@ -232,11 +256,11 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Toggle & Language Switcher */}
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2.5 lg:hidden">
           <select 
             value={locale} 
             onChange={changeLanguage}
-            className="bg-white/20 text-xs sm:text-sm text-white font-bold focus:outline-none cursor-pointer border border-white/30 rounded-lg px-2 py-1 shadow-xs"
+            className="h-10 bg-white/20 text-xs text-white font-bold focus:outline-none cursor-pointer border border-white/30 rounded-xl px-2.5 py-1 shadow-xs"
             aria-label={t('language')}
           >
             <option value="en" className="bg-primary text-white">EN</option>
@@ -244,9 +268,10 @@ export function Navbar() {
           </select>
 
           <button 
-            className="p-2 text-white focus:outline-none active:scale-95 transition-transform"
+            className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/10 hover:bg-white/20 active:scale-95 transition-all text-white focus:outline-none focus:ring-2 focus:ring-accent-gold/40 cursor-pointer"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMobileMenuOpen ? (
@@ -261,17 +286,18 @@ export function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-primary text-white shadow-2xl py-4 px-6 flex flex-col gap-1 border-t border-white/15 max-h-[calc(100vh-100px)] overflow-y-auto">
-          <Link href="/" onClick={handleHomeClickMobile} className="text-white hover:text-accent-gold py-3 text-base font-semibold border-b border-white/10">{t('home')}</Link>
-          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold py-3 text-base font-semibold border-b border-white/10">{t('about')}</Link>
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-primary/98 backdrop-blur-xl text-white shadow-2xl py-4 px-4 sm:px-6 flex flex-col gap-1 border-t border-white/15 max-h-[calc(100dvh-5rem)] overflow-y-auto">
+          <Link href="/" onClick={handleHomeClickMobile} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('home')}</Link>
+          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('about')}</Link>
 
           {/* Mobile Programs Accordion */}
           <div className="border-b border-white/10 py-1">
             <button
               onClick={() => setIsMobileProgramsOpen(prev => !prev)}
-              className="w-full flex items-center justify-between text-white hover:text-accent-gold py-2.5 text-base font-semibold focus:outline-none"
+              className="w-full flex items-center justify-between text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] text-base font-semibold focus:outline-none rounded-xl active:bg-white/10 transition-colors"
+              aria-expanded={isMobileProgramsOpen}
             >
-              {t('services')}
+              <span>{t('services')}</span>
               <svg
                 className={`w-4 h-4 transition-transform duration-200 ${isMobileProgramsOpen ? 'rotate-180' : ''}`}
                 fill="none"
@@ -282,11 +308,11 @@ export function Navbar() {
               </svg>
             </button>
             {isMobileProgramsOpen && (
-              <div className="pl-4 flex flex-col gap-1 border-l-2 border-secondary/40 ml-2 my-2 py-1">
+              <div className="pl-3 sm:pl-4 flex flex-col gap-1 border-l-2 border-secondary/40 ml-2 my-2 py-1">
                 <Link
                   href="/services"
                   onClick={() => { setIsMobileMenuOpen(false); setIsMobileProgramsOpen(false); }}
-                  className="text-sm font-bold text-accent-gold py-2 hover:opacity-80 flex items-center gap-2"
+                  className="text-sm font-bold text-accent-gold px-3 py-2 min-h-[40px] flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
                 >
                   <span>→</span> All Programs
                 </Link>
@@ -295,7 +321,7 @@ export function Navbar() {
                     key={prog.slug}
                     href={`/services/${prog.slug}`}
                     onClick={() => { setIsMobileMenuOpen(false); setIsMobileProgramsOpen(false); }}
-                    className="text-sm text-white/90 hover:text-accent-gold py-2 transition-colors flex items-center gap-2"
+                    className="text-sm text-white/90 hover:text-accent-gold px-3 py-2 min-h-[40px] flex items-center gap-2 rounded-lg hover:bg-white/10 active:bg-white/15 transition-colors"
                   >
                     <span className="text-secondary font-bold">{prog.num}.</span>
                     {prog.label}
@@ -305,9 +331,22 @@ export function Navbar() {
             )}
           </div>
 
-          <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold py-3 text-base font-semibold border-b border-white/10">{t('testimonials')}</Link>
-          <Link href="/coach" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold py-3 text-base font-semibold border-b border-white/10">{t('coach')}</Link>
-          <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold py-3 text-base font-semibold">{t('contact')}</Link>
+          <Link href="/testimonials" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('testimonials')}</Link>
+          <Link href="/coach" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold border-b border-white/10 rounded-xl active:bg-white/10 transition-colors">{t('coach')}</Link>
+          <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white hover:text-accent-gold px-3 py-2.5 min-h-[44px] flex items-center text-base font-semibold rounded-xl active:bg-white/10 transition-colors">{t('contact')}</Link>
+
+          {/* Quick Direct Call Button */}
+          <div className="pt-3 mt-2 border-t border-white/15 flex flex-col gap-2">
+            <a 
+              href="tel:8639510702"
+              className="w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white/15 text-white font-semibold text-sm hover:bg-white/25 active:scale-98 transition-all"
+            >
+              <svg className="w-4 h-4 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span>Call: +91 86395 10702</span>
+            </a>
+          </div>
         </div>
       )}
     </header>

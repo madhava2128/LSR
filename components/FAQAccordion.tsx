@@ -43,14 +43,14 @@ export function FAQAccordion({ title = "Frequently Asked Questions", faqs, class
             >
               <button
                 onClick={() => toggle(idx)}
-                className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 focus:outline-none cursor-pointer"
+                className="w-full text-left px-4 py-4 sm:px-6 sm:py-5 min-h-[44px] flex justify-between items-center gap-3 sm:gap-4 focus:outline-none cursor-pointer"
                 aria-expanded={isOpen}
               >
-                <span className="font-heading font-semibold text-base sm:text-lg text-text-dark">
+                <span className="font-heading font-semibold text-sm sm:text-base md:text-lg text-text-dark leading-snug">
                   {faq.question}
                 </span>
-                <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-primary text-white' : 'bg-sage-light text-text-muted'}`}>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180 bg-primary text-white' : 'bg-sage-light text-text-muted'}`}>
+                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
@@ -65,7 +65,7 @@ export function FAQAccordion({ title = "Frequently Asked Questions", faqs, class
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 text-text-muted text-sm sm:text-base leading-relaxed border-t border-border-subtle/60 pt-4">
+                    <div className="px-4 pb-4 sm:px-6 sm:pb-6 text-text-muted text-xs sm:text-sm md:text-base leading-relaxed border-t border-border-subtle/60 pt-3 sm:pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>

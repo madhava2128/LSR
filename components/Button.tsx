@@ -11,7 +11,7 @@ export function Button({
   disabled,
   ...props 
 }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center px-6 py-2.5 rounded-2xl font-medium text-sm sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
+  const baseStyles = "inline-flex items-center justify-center min-h-[44px] px-6 py-2.5 rounded-2xl font-medium text-sm sm:text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/40 active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none cursor-pointer";
   
   const variants = {
     primary: "bg-primary text-white hover:bg-primary-hover shadow-xs hover:shadow-md",
