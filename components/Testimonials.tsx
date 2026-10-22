@@ -15,17 +15,13 @@ interface TestimonialsProps {
 export function Testimonials({ limit }: TestimonialsProps = {}) {
   const t = useTranslations('Testimonials');
 
-  const allKeys = ['1', '2', '3', '4', '5', '6', '7', '8'];
+  const allKeys = ['1', '2', '3', '4'];
   const testimonialKeys = limit ? allKeys.slice(0, limit) : allKeys;
   const photos: Record<string, string> = {
     '1': "/images/testimonials/1.webp",
-    '2': "/images/testimonials/3.webp",
-    '3': "/images/testimonials/2.webp",
-    '4': "/images/testimonials/4.webp",
-    '5': "/images/testimonials/5.webp",
-    '6': "/images/testimonials/6.webp",
-    '7': "/images/testimonials/7.webp",
-    '8': "/images/testimonials/8.webp"
+    '2': "/images/testimonials/12.webp",
+    '3': "/images/testimonials/23.webp",
+    '4': "/images/testimonials/34.webp"
   };
 
   return (
