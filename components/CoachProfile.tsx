@@ -13,9 +13,10 @@ export function CoachProfile() {
           {/* Editorial Photo Side */}
           <div className="lg:col-span-5 relative w-full aspect-4/5 sm:aspect-3/4 lg:aspect-auto lg:h-135 rounded-3xl sm:rounded-4xl overflow-hidden shadow-xs border border-border-subtle bg-sage-light flex flex-col items-center justify-center">
             <Image
-              src="/images/services/coach.webp"
+              src="/images/services/coach-siva.webp"
               alt={t('name')}
               fill
+              priority
               className="object-cover object-top"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />

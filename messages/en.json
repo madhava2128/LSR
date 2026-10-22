@@ -377,7 +377,7 @@
     "name": "Siva Gangadhar Reddy",
     "title": "Senior Wellness Coach",
     "bio_1": "Siva Gangadhar Reddy provides personalized nutrition and wellness guidance based on the LNC Nutrition System and healthy food habits.",
-    "bio_2": "Her approach focuses on helping individuals understand better food choices, develop mindful eating habits, and make practical lifestyle changes that can be maintained over time.",
+    "bio_2": "His approach focuses on helping individuals understand better food choices, develop mindful eating habits, and make practical lifestyle changes that can be maintained over time.",
     "credentials_note": "* Certified Wellness Coach specializing in customized nutrition plans, holistic lifestyle habit building, and dedicated 1-on-1 guidance.",
     "faq_heading": "Coaching FAQs",
     "faqs": [
@@ -483,28 +483,20 @@
     "subtext": "Explore real moments, program highlights, and healthy lifestyle transformations at LSR Nutrition Club.",
     "items": [
       {
-        "title": "Personalized Diet Planning",
-        "tag": "Nutrition"
+        "title": "Community Nutrition Sessions",
+        "tag": "Education"
       },
       {
-        "title": "1-on-1 Health Coaching",
-        "tag": "Coaching"
+        "title": "Club Celebrations & Milestones",
+        "tag": "Celebration"
       },
       {
-        "title": "Mindful Eating Habits",
-        "tag": "Lifestyle"
-      },
-      {
-        "title": "Sustainable Weight Management",
-        "tag": "Fitness"
-      },
-      {
-        "title": "Healthy Home Meals",
-        "tag": "Wellness"
-      },
-      {
-        "title": "Active Living & Support",
+        "title": "Wellness Achievement Gatherings",
         "tag": "Community"
+      },
+      {
+        "title": "Daily Nutrition & Healthy Habits",
+        "tag": "Coaching"
       }
     ]
   },

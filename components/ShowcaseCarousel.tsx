@@ -7,12 +7,10 @@ import { SectionHeading } from './SectionHeading';
 import { useTranslations } from 'next-intl';
 
 const CAROUSEL_IMAGES = [
-  { id: 'a', src: '/images/carousels/a.webp' },
-  { id: 'b', src: '/images/carousels/b.webp' },
-  { id: 'c', src: '/images/carousels/c.webp' },
-  { id: 'd', src: '/images/carousels/d.webp' },
-  { id: 'e', src: '/images/carousels/e.webp' },
-  { id: 'f', src: '/images/carousels/f.webp' },
+  { id: '1', src: '/images/carousels/11.webp' },
+  { id: '2', src: '/images/carousels/22.webp' },
+  { id: '3', src: '/images/carousels/33.webp' },
+  { id: '4', src: '/images/carousels/44.webp' },
 ];
 
 export function ShowcaseCarousel() {
@@ -20,6 +18,7 @@ export function ShowcaseCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const count = CAROUSEL_IMAGES.length;
 
   const nextSlide = useCallback(() => {
@@ -29,6 +28,23 @@ export function ShowcaseCarousel() {
   const prevSlide = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + count) % count);
   }, [count]);
+
+  // Touch Swipe Handlers for mobile
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diffX = touchStartX - touchEndX;
+    if (diffX > 45) {
+      nextSlide();
+    } else if (diffX < -45) {
+      prevSlide();
+    }
+    setTouchStartX(null);
+  };
 
   // Keyboard Navigation: Arrow Left / Right
   useEffect(() => {
@@ -65,51 +81,31 @@ export function ShowcaseCarousel() {
         filter: 'none',
         pointerEvents: 'auto' as const,
       };
-    } else if (diff === 1 || (diff === -(count - 1) && count > 2)) {
+    } else if (diff === 1 || diff === -(count - 1)) {
       // Immediate Right Card
       return {
         x: '62%',
         scale: 0.88,
-        opacity: 0.8,
+        opacity: 0.82,
         zIndex: 20,
         filter: 'brightness(0.92)',
         pointerEvents: 'auto' as const,
       };
-    } else if (diff === -1 || (diff === count - 1 && count > 2)) {
+    } else if (diff === -1 || diff === count - 1) {
       // Immediate Left Card
       return {
         x: '-62%',
         scale: 0.88,
-        opacity: 0.8,
+        opacity: 0.82,
         zIndex: 20,
         filter: 'brightness(0.92)',
         pointerEvents: 'auto' as const,
       };
-    } else if (diff === 2) {
-      // Far Right
-      return {
-        x: '108%',
-        scale: 0.74,
-        opacity: 0.35,
-        zIndex: 10,
-        filter: 'brightness(0.8)',
-        pointerEvents: 'auto' as const,
-      };
-    } else if (diff === -2) {
-      // Far Left
-      return {
-        x: '-108%',
-        scale: 0.74,
-        opacity: 0.35,
-        zIndex: 10,
-        filter: 'brightness(0.8)',
-        pointerEvents: 'auto' as const,
-      };
     } else {
-      // Hidden behind
+      // Hidden behind center card (transitions smoothly in/out)
       return {
-        x: diff > 0 ? '140%' : '-140%',
-        scale: 0.6,
+        x: '0%',
+        scale: 0.72,
         opacity: 0,
         zIndex: 0,
         filter: 'brightness(0.5)',
@@ -133,9 +129,11 @@ export function ShowcaseCarousel() {
 
         {/* Center Showcase Carousel Frame */}
         <div 
-          className="relative w-full max-w-5xl mx-auto h-80 sm:h-115 md:h-130 flex items-center justify-center overflow-hidden"
+          className="relative w-full max-w-5xl mx-auto h-80 sm:h-115 md:h-130 flex items-center justify-center overflow-hidden touch-pan-y"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           {CAROUSEL_IMAGES.map((img, idx) => {
             const cardStyle = getCardStyle(idx);
