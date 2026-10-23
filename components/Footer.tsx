@@ -103,8 +103,8 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">{t('contact')}</h4>
             <ul className="flex flex-col gap-2.5 text-xs sm:text-sm text-sage-light/80 font-medium">
               <li>
-                <a href="mailto:lsrnutrition@gmail.com" className="hover:text-accent-gold transition-colors truncate block">
-                  lsrnutrition@gmail.com
+                <a href="mailto:lsrnutritionclub@gmail.com" className="hover:text-accent-gold transition-colors truncate block">
+                  lsrnutritionclub@gmail.com
                 </a>
               </li>
               <li>

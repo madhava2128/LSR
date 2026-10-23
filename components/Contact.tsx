@@ -113,11 +113,11 @@ export function Contact() {
               <div className="space-y-5 sm:space-y-6">
                 <div>
                   <h4 className="text-[11px] sm:text-xs font-bold text-primary uppercase tracking-widest mb-1.5 sm:mb-2">{t('email_label')}</h4>
-                  <a href="mailto:lsrnutrition@gmail.com" className="text-text-dark hover:text-primary transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
+                  <a href="mailto:lsrnutritionclub@gmail.com" className="text-text-dark hover:text-primary transition-colors font-medium flex items-center gap-2.5 text-sm sm:text-base">
                     <svg className="w-4 h-4 sm:w-5 sm:h-5 text-secondary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <span className="truncate">lsrnutrition@gmail.com</span>
+                    <span className="truncate">lsrnutritionclub@gmail.com</span>
                   </a>
                 </div>
                 

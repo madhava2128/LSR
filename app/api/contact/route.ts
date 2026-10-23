@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { name, phone, email, program, message } = body;
 
     // Primary: Direct email delivery via FormSubmit AJAX
-    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/lsrnutrition@gmail.com", {
+    const formSubmitResponse = await fetch("https://formsubmit.co/ajax/lsrnutritionclub@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
