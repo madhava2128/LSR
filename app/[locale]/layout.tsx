@@ -36,11 +36,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {
+    metadataBase: new URL('https://lsrnutritionclub.in'),
     title: t('title'),
     description: t('description'),
     openGraph: {
       title: t('title'),
       description: t('description'),
+      url: `https://lsrnutritionclub.in/${locale}`,
+      siteName: 'LSR Nutrition Club',
+      locale: locale === 'te' ? 'te_IN' : 'en_US',
+      type: 'website',
     },
     icons: {
       icon: '/icon.svg',
@@ -48,7 +53,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       languages: {
         'en': '/en',
-        'te': '/te'
+        'te': '/te',
+        'x-default': '/en'
       }
     }
   };
